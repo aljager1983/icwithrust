@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "ICwithRust_backend": {
+      "candid": "src/ICwithRust_backend/ICwithRust_backend.did",
+      "package": "ICwithRust_backend",
+      "type": "rust"
+    },
+    "ICwithRust_frontend": {
+      "dependencies": [
+        "ICwithRust_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/ICwithRust_frontend/src/index.html"
+      },
+      "source": [
+        "src/ICwithRust_frontend/assets",
+        "dist/ICwithRust_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
